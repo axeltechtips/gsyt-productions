@@ -2,6 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f0f0f0;
 }
 
 header {
@@ -9,10 +10,14 @@ header {
   color: #fff;
   padding: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
   margin: 0;
+  font-size: 24px;
 }
 
 #company-logo {
@@ -26,23 +31,53 @@ nav {
   color: #fff;
   padding: 10px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav ul li {
-  display: inline-block;
   margin: 0 10px;
   color: #FFFFFF;
 }
 
-section {
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
-  text-align: center;
+}
+
+section {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+section a {
+  color: #000000;
+}
+
+a {
+  color: #0078d7;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 footer {
@@ -50,18 +85,30 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
-}
-section a {
-    color: #000000; 
+  clear: both;
 }
 
- a {
-  color: #FFFFFF; 
-}
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+/* Responsive design */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  section {
+    margin-bottom: 10px;
+  }
 }
 
-
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+  }
+  nav {
+    flex-direction : column;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    margin-bottom: 10px;
+  }
+}
